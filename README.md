@@ -6,7 +6,7 @@ A minimal C++ rendering engine built using *Ray Tracing in One Weekend* as a bas
 
 ## Preview
 
-![Render Preview](docs/images/preview.png)
+![Render Preview](docs/images/mitsuba.png)
 
 ---
 
@@ -26,7 +26,7 @@ A minimal C++ rendering engine built using *Ray Tracing in One Weekend* as a bas
 
 | Scene 1 | Scene 2 |
 |--------|--------|
-| ![Scene 1](docs/images/scene1.png) | ![Scene 2](docs/images/scene2.png) |
+| ![Scene 1](docs/images/m3.png) | ![Scene 2](docs/images/living_room1024spp.png) |
 
 ---
 
@@ -62,3 +62,32 @@ Once the project is retrieved, generate the configuration files using CMake:
 
 ```bash
 cmake -S . -B build
+```
+
+### Run the Engine
+
+After generating the build files, simply run the provided script:
+
+``run.bat``
+
+## Troubleshooting
+
+### Error: Cannot open include file: `glm/glm.hpp`
+
+If you encounter this compilation error, it means the **GLM** library is not properly linked to your project.
+
+#### Fix (Visual Studio)
+
+1. Set the build configuration to **Release**
+2. Open **Project Properties**
+3. Navigate to:  
+   `C/C++ → General → Additional Include Directories`
+4. Add the path `C:\Render_Engine_v1\libs`
+5. Apply changes
+
+#### Rebuild
+
+- Rebuild the entire solution:
+  - `Build → Rebuild Solution`
+
+After completing these steps, the project should compile successfully and `run.bat` should work as expected.
