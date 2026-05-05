@@ -52,7 +52,7 @@ During installation, it is recommended to include the **GLM** library to simplif
 
 ### Getting the Project
 
-Clone or download the engine from the GitLab repository.
+Clone or download the engine from the Github repository.
 
 ---
 
